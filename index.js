@@ -1,16 +1,28 @@
 const { WatneyPlugin } = require('watney-app');
 
 module.exports = class ExamplePlugin extends WatneyPlugin {
+  /**
+   * The ID for this plugin. Must be unique. Should be consistent with the module name.
+   *
+   * @readonly
+   * @static
+   */
   static get id() {
     return 'example';
   }
 
+  /**
+   * A description of the plugin.
+   *
+   * @readonly
+   * @static
+   */
   static get description() {
     return 'An example Watney plugin.';
   }
 
   /**
-   * Create an instance of our plugin.
+   * Create an instance of the plugin.
    *
    * @param {Object} config The config object from the Watney config for this plugin.
    *   Watney will look in its config for a property with the same name as the static `id`
@@ -27,6 +39,8 @@ module.exports = class ExamplePlugin extends WatneyPlugin {
    *
    * Time-intensive and other async operations that are required to set up the plugin,
    * (e.g., authenticating and establishing other connections to APIs) go here.
+   *
+   * This will be awaited before scripts are run.
    *
    */
   async init() {
