@@ -22,6 +22,18 @@ module.exports = class ExamplePlugin extends WatneyPlugin {
   }
 
   /**
+   * The CLI function for the plugin.
+   *
+   * Will be passed the Watney app and awaited when a user selects this plugin in the main CLI.
+   *
+   * @readonly
+   * @static
+   */
+  static get cli() {
+    return require('./cli');
+  }
+
+  /**
    * Create an instance of the plugin.
    *
    * @param {Object} config The config object from the Watney config for this plugin.
