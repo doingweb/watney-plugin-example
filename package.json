@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/doingweb/watney-plugin-example#readme",
   "dependencies": {
-    "inquirer": "^6.1.0",
+    "inquirer": "^7.0.1",
     "watney-app": "^1.0.0"
   },
   "devDependencies": {
